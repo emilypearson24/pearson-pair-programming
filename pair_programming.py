@@ -12,17 +12,17 @@ def polar_to_rect(r, theta):  #define function
     
     Parameters
     ----------
-    input : int or float
-        Input is values for the coordinates (r, theta)
-        
+    r (int, float, or ndarray) : polar r-value
+    theta (int, float, or ndarray): the angle theta of the polar coordinate
+     
     Returns
     -------
-    output : float
-        Output is the rectangular coordinates (x, y) of the point
+    x (int, float, or ndarray) : Cartesian x-coordinate of the point
+    y (int, float, ndarray) : Cartesian y-coordinate of the point
     
     """
+    assert (type(r)==float) or (type(r)==int) or (type(r)==np.ndarray)
     x = r * np.cos(theta)  #x-coordinate = r*cos(theta)
     y = r * np.sin(theta)  #y-coordinate = r*sin(theta)
-    
     return(x, y)
 
